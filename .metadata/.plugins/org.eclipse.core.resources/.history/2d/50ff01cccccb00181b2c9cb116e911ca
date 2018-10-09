@@ -1,0 +1,29 @@
+package com.qa.MySQL;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBC {
+	public static void main(String[] args) throws ClassNotFoundException {
+	Connection comn = null;
+	Statement stmt = null;
+	try {
+	Class.forName("com.mysql.jdbc.Driver");
+	comn = DriverManager.getConnection("jdbc:mysql://localhost:3306?&useSSL=true","root","gangster01");
+	stmt = (Statement) comn.createStatement();
+	String sql;
+	String insert = null;
+	insert = "INSERT INTO actor VALUES (1,john,deen);";
+	stmt.executeUpdate(insert);
+	System.out.println("Inserted");
+	comn.close();
+	stmt.close();
+	}
+	catch(SQLException se) {
+		
+	}
+}
+}

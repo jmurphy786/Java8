@@ -1,0 +1,26 @@
+
+import java.sql.Connection;
+import java.sql.*;
+
+public class JDBC {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+	Connection comn = null;
+	Statement stmt = null;
+	try {
+	Class.forName("com.mysql.jdbc.Driver");
+	comn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/sakila","root","gangstero1");
+	stmt = (Statement) comn.createStatement();
+	String sql;
+	sql = "SELECT id, first, last, age FROM actor";
+	ResultSet rs = stmt.executeQuery(sql);
+	while(rs.next()) {
+	System.out.println(rs.getInt("actor_id"));
+	System.out.println(rs.getString("first_name"));	
+	}
+	}
+	catch(SQLException se) {
+		
+	}
+}
+}

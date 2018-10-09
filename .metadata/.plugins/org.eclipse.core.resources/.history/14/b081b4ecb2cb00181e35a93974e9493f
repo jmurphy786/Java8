@@ -1,0 +1,101 @@
+import java.awt.Button;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+public class Events implements ActionListener {
+
+	TextField t1;
+	Button bt;
+	int i,z;
+	ArrayList<Integer> values= new ArrayList<Integer>();
+	ArrayList<Character> ops = new ArrayList<Character>();
+	int result;
+	String str = "";
+	
+	public Events(TextField t1) {
+		this.t1 = t1;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		
+		bt = (Button)arg0.getSource();
+		String btSource = bt.getLabel();
+		
+		
+		if(btSource.equals("+")) {
+			result = Integer.parseInt(t1.getText());
+			values.add(result);
+			str = "";
+			ops.add('+');
+			t1.setText("");
+		}
+		
+		else if(btSource.equals("-")) {
+			result = Integer.parseInt(t1.getText());
+			values.add(result);
+			str = "";
+			ops.add('-');
+			t1.setText("");
+		}
+		
+		else if(btSource.equals("/")) {
+			result = Integer.parseInt(t1.getText());
+			values.add(result);
+			str = "";
+			ops.add('/');
+			t1.setText("");
+		}
+		
+		else if(btSource.equals("*")) {
+			result = Integer.parseInt(t1.getText());
+			values.add(result);
+			str = "";
+			ops.add('*');
+			t1.setText("");
+		}
+		
+		else if(btSource.equals("=")) {
+			result = Integer.parseInt(t1.getText());
+			values.add(result);
+			int counter = 0;
+			System.out.println(values);
+			System.out.println(ops.size());
+			z = 0;
+			for(int i = 0 ; i < ops.size(); i++) {
+				
+				if(i > ops.size()) {
+					break;
+				}
+				else if (ops.get(i) == '+') {
+				z = values.get(counter)  + values.get(counter + 1); 
+				}
+				else if (ops.get(i) == '-') {
+				z = values.get(counter) - values.get(counter + 1); 
+				}
+				else if (ops.get(i) == '*') {
+				z = values.get(counter)  * values.get(counter + 1); 
+				}
+				else if (ops.get(i) == '/') {
+				z = values.get(counter)  / values.get(counter + 1); 
+				}
+		
+				counter++;
+			}
+			values.clear();
+			ops.clear();
+			System.out.println(values);
+			System.out.println(ops.size());
+			values.add(z);
+			t1.setText("" + z);
+			str = "";
+		}
+		else {
+			str += btSource;
+			t1.setText(str);
+		}
+
+	}
+}

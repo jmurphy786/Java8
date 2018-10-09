@@ -1,0 +1,8 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		QAConsulting R1 = QAConsulting.createObject();
+		System.out.println(R1);
+	}
+}

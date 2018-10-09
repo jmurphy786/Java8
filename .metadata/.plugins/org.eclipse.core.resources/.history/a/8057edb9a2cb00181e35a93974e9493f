@@ -1,0 +1,44 @@
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+
+public class UsingFrame {
+
+	public static void main(String[] args) {
+		
+		Frame f = new Frame("My Frame");
+		
+		Button add,sub,mult;
+		TextField t1,t2,t3;
+		Label l1,l2,l3;
+		
+		t1 = new TextField();
+		t2 = new TextField();
+		t3 = new TextField();
+		
+		l1 = new Label("No1");
+		l2= new Label("No2");
+		l3 = new Label("No3");
+		
+		add = new Button("+");
+		sub = new Button("-");
+		mult = new Button("*");
+		
+		FlowLayout flow = new FlowLayout();
+		f.setLayout(flow);
+		
+		f.add(l1);
+		f.add(t1);
+		f.add(l2);
+		f.add(t2);
+		f.add(add);
+		f.add(sub);
+		f.add(mult);
+		f.add(l3);
+		f.add(t3);
+		
+		Events e = new Events(l1, l2, l3);
+	}
+}

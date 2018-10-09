@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;windws&apos; to &apos;windows&apos;&#x0D;&#x0A;- Original project: &apos;CreatingWindow&apos;&#x0D;&#x0A;- Original element: &apos;windws&apos;&#x0D;&#x0A;- Renamed element: &apos;windows&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;windws&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{windws.java[windws" matchStrategy="1" name="windows" qualified="false" references="true" similarDeclarations="false" stamp="1538999225163" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,25 @@
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class EventThree implements ActionListener {
+	  ImageIcon icon = new ImageIcon("C://Users//Admin//Documents//ains3.jpg");
+	  JLabel label = new JLabel(icon);
+	
+	  @Override
+	public void actionPerformed(ActionEvent e) {
+		  Frame frame = new Frame();
+		  frame.add(label);
+		  ((JFrame) frame).setDefaultCloseOperation
+		         (JFrame.EXIT_ON_CLOSE);
+		  frame.pack();
+		  frame.setVisible(true);
+		
+	}
+
+
+}

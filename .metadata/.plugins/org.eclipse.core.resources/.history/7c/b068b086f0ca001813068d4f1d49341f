@@ -1,0 +1,18 @@
+
+
+import java.awt.*;
+
+public class windows {
+
+	public static void main(String[] args) {
+		Frame f = new Frame("MyFrame");
+		Button bt1 = new Button("Shafeed");
+		Button bt2 = new Button("click");
+		Button bt3 = new Button("clock");
+		f.setVisible(true);
+		
+		f.add(bt1, BorderLayout.NORTH);
+		f.add(bt2, BorderLayout.CENTER);
+		f.add(bt3, BorderLayout.EAST);
+	}
+}

@@ -1,0 +1,17 @@
+
+public class QAConsulting {
+
+	static QAConsulting r;
+	
+	private QAConsulting() {
+		
+	}
+	
+	public static QAConsulting createObject() {
+		if(r == null) {
+			r = new QAConsulting();
+		}
+		return r;
+	}
+	
+}

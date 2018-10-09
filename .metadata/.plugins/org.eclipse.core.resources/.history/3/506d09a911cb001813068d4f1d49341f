@@ -1,0 +1,30 @@
+
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.*;
+
+public class windows {
+
+	public static void main(String[] args) {
+		Frame f = new Frame("MyFrame");
+		Button bt1 = new Button("Shafeed");
+		Button bt2 = new Button("click");
+		Button bt3 = new Button("clock");
+		
+		
+		f.setVisible(true);
+		f.setSize(400,400);
+		
+		f.add(bt1, BorderLayout.NORTH);
+		f.add(bt2, BorderLayout.CENTER);
+		f.add(bt3, BorderLayout.EAST);
+		
+		
+		Event E = new Event();
+		
+		bt1.addActionListener(E);
+		bt2.addActionListener(E);
+		bt3.addActionListener(E);
+	}
+}
